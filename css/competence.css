@@ -1,0 +1,115 @@
+*, ::before, ::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.competence {
+    padding: 25px 25px 25px 25px;
+    justify-content: center;
+  }
+   #comp{
+    position: relative;
+    display: grid;
+    justify-content: center;
+    justify-items: center;
+    gap: 5px;
+    grid-template-columns: 1fr 1fr ;
+    grid-template-rows: 1fr 1fr 0.5fr;
+  
+  }
+  
+  #comp img{
+    width: 150px; 
+    height: 150px;
+    float: center;
+    opacity: 0.5;
+  }
+  .competence article>div {
+    background-color: var(--clr-wio);
+    border: 2px solid transparent;
+    box-shadow: 2px 2px 2px 2px var(--clr-titre);
+    margin: 15px 15px 15px 15px; 
+    width: 500px; 
+    height: 155px ;
+    transition: transform 2.5s;
+    transform-style: preserve-3d; 
+    border-radius: 0.5rem;
+  }
+  
+  #comp article:hover>div, #comp article.hover>div  {
+      transform: rotateY(180deg);
+  }
+  
+  .card-front,
+  .card-back {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      backface-visibility: hidden;
+      justify-content: center;
+      align-items: center;
+      border-radius: 0.5rem;
+  }
+  
+  .card-front {
+    text-align: center;
+    background-color: var(--clr-wio);
+  }
+  
+  .card-back {
+      background-color:var(--clr-wi);
+      text-align: center;
+      border: 2px solid  var(--clr-t-);
+      background-color: var(--clr-wi);
+      transform: rotateY(180deg);
+  }
+  .card-front p {
+    text-align: center;
+    font-size: 2rem;
+  }
+  
+  
+  #front{
+  grid-column: 1/1;
+  grid-row: 1/1;
+  }
+  #back{
+    grid-column: 2/3;
+    grid-row: 1/2;
+  }
+  #sf{
+    grid-column: 1/2;
+    grid-row: 2/3;
+  } 
+  #sf1{
+    grid-column: 2/3;
+    grid-row: 2/3;
+  } 
+  
+ /*--------responsive----------------------------- */
+ @media screen and (max-width: 900px) {
+  #comp{
+    display: initial;
+   
+  }
+  #comp article{
+    margin-left:140px;
+  }
+  #comp article:active{
+    transform: rotateY(180deg);
+  }
+}
+
+
+ @media screen and (max-width: 500px) {
+  #comp{
+    display: initial;
+  }
+  #comp article{
+    margin-left:-10px;
+  }
+  .competence article>div{
+    width: 300px; 
+
+ }
+}

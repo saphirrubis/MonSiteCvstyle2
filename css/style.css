@@ -1,0 +1,290 @@
+:root {
+    --clr-titre: #06ffffef;
+    --clr-tr: #4921fa;
+    --clr-qr: #276ff5;
+    --clr-qr1:#8a39f5;
+    --clr-wi: whitesmoke;
+    --clr-t-: rgb(132, 0, 255);
+    --clr-wio : rgba(245, 245, 245, 0.25);
+    --spacing: 0.25rem;
+    --radius: 0.5rem;
+  }
+  
+  @font-face {
+    font-family: thegreat;
+    src: url(../font/FrederickatheGreat-Regular.ttf);
+  }
+  
+  @font-face {
+    font-family: kalam;
+    src: url(../font/Kalam-Light.ttf);
+  }
+  
+  @font-face {
+    font-family: tangerine;
+    src: url(../font/Tangerine-Regular.ttf);
+  }
+  @font-face {
+    font-family: tail;
+    src: url(../font/Yellowtail-Regular.ttf);
+  }
+  
+  *,
+  ::before,
+  ::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  /* ---------------------------------------mis en forme------------------------------------------------*/
+  body {
+    width: 100%;
+    min-height: 100vh;
+    background: linear-gradient(#36b173, rgba(201, 247, 117, 0.678));
+    background-repeat: no-repeat;
+    font-family: Georgia;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+  }
+  
+  header {
+    text-align: center;
+  }
+  
+  nav {
+    border: 3px solid rgba(0, 0, 0, 0);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+  }
+    
+  h1 {
+ 
+    font-family: tail, Georgia;
+    letter-spacing: var(--spacing);
+    color: var(--clr-titre);
+    text-align: center;
+    font-size: 4rem;
+    text-shadow: 10px 10px 5px var(--clr-t-);
+  }
+  
+  h2 {
+    color: var(--clr-t-);
+    text-align: center;
+    font-family: thegreat, Georgia;
+    font-size: 2rem;
+    text-shadow: 10px 10px 3px  var(--clr-titre);
+  }
+  
+  h3 {
+    color: var(--clr-tr);
+    letter-spacing: var(--spacing);
+    font-size: 2rem;
+    font-family: tangerine,  Georgia;
+  }
+  
+  h4 {
+    color: var(--clr-qr);
+    font-family: kalam;
+  
+  }
+  .titre{
+    font-family: tail, Georgia;
+    position: relative;
+    padding: 0 1rem;
+    text-align: center;
+    font-size: 4rem;
+    line-height: 5rem;
+    color: var(--clr-titre);
+    font-weight:bold ;
+    text-transform: uppercase;
+   
+   }
+  .titre::before,.titre::after{
+       position: absolute;
+       display: block;
+       content:"" ;
+       width: 0;
+       border-top: 3px solid var(--clr-tr);
+       transition-property: width;
+       transition-duration: 0.5s;
+   }
+   .titre::before{
+       top:-3px;
+       left: 0;
+   }
+   .titre::after{
+       bottom: -3px;
+       right: 0;
+   }
+   .titre:hover{
+       color: var(--clr-t-);
+       text-shadow: 5px 5px 5px var(--clr-titre);
+   }
+   .titre:hover::before,.titre:hover::after{
+    width: 100%;
+   }
+   .titre:active{
+       color: var(--clr-qr);
+     
+   }
+   .titre:active::before,.titre:active::after{
+       border-color: var(--clr-t-);
+   }
+  /*----------------------------------- partie d'accueil-------------------------------------------------*/
+  .accueil {
+    margin: 0 25px 50px 25px;
+    background-image: url(../image/zen3.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    min-height: 70vh;
+  }
+
+  .logos{
+    position: relative;
+    display: grid;
+    gap: 5px;
+    flex-wrap: wrap;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    justify-items: center;
+  }
+  .logos span{
+    opacity: 0;
+  }
+  #titre {
+    text-align: center;
+    padding: 8% 0;
+  }
+  #titre span{
+  opacity: 0;
+  }
+   .logo{
+    width: 180px; 
+    height: 150px;
+    
+   }
+  #logo1{
+    grid-column: 1;
+    grid-row: 1;
+  }
+  #logo2{
+    grid-column:1 ;
+    grid-row: 2;
+  }
+  #logo3{
+    grid-column:3;
+    grid-row: 1;
+  }
+  #logo4{
+    grid-column:1 ;
+    grid-row:3 ;
+  }
+  #logo5{
+    grid-column:2 ;
+    grid-row: 1;
+  }
+  #logo6{
+    grid-column: 3;
+    grid-row: 3;
+  }
+  #logo7{
+    grid-column: 3;
+    grid-row: 2;
+  }
+  /*-----------------------------footer-----------------------------------------------*/
+  .ligne {
+    margin-top: 50px;
+    height: 2px;
+    width: 100%;
+    background-color:var(--clr-titre);
+  }
+  
+  footer {
+    margin: 25px 25px 25px 25px;
+    margin-bottom: 0;
+  }
+  
+  #contact {
+    margin: 15px 15px 15px 15px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    list-style: none;
+  }
+  
+  .fa-envelope,
+  .fa-github-square {
+    color:var(--clr-t-);
+  }
+
+   /*--------responsive----------------------------- */
+ @media screen and (max-width: 900px) {
+ 
+  .titre{
+    font-size: 2rem; 
+    line-height: 2.5rem;
+  }
+  /* --accueil---- ----------------------------*/
+  .accueil{
+  min-height:100vh;
+  }
+  .logos{
+    gap: 5px;
+    flex-wrap: wrap;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+    justify-items: center
+   }
+    
+    #logo1{
+      grid-column: 1;
+      grid-row: 3;
+    }
+    #logo2{
+      grid-column:1 ;
+      grid-row: 4;
+    }
+    #logo3{
+      grid-column:3;
+      grid-row: 3;
+    }
+    #logo4{
+      grid-column:1 ;
+      grid-row:5 ;
+    }
+    #logo5{
+      grid-column:2 ;
+      grid-row: 4;
+    }
+    #logo6{
+      grid-column: 3;
+      grid-row: 5;
+    }
+    #logo7{
+      grid-column: 3;
+      grid-row: 4;
+    }
+
+ }
+ @media screen and (max-width: 500px) {
+  .titre{
+    font-size: 1rem; 
+    line-height: 1.5rem;
+  }
+  h1 {
+    font-size: 2rem;
+  }
+  h2{
+    font-size: 1.5rem;
+  }
+
+  /* --accueil---- */
+ 
+  .logo{
+    width: 80px; 
+    height: 70px;
+  }
+ 
+ }

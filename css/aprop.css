@@ -1,0 +1,126 @@
+.aproposdemoi {
+    width: 100%; 
+    padding: 50px 25px 50px 25px;
+    display: grid;
+    flex-wrap: wrap;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 100%;
+    background-size: cover;
+  }
+  
+  #perso {
+    margin-left: 20px;
+    text-align: justify;
+   }
+  #button{
+    text-align: center;
+  }
+  button{
+    width: 200px; 
+    height: 100px; 
+    text-align: center;
+    font-size: 1.5rem;
+    color:var(--clr-titre);
+    background-color: var(--clr-wio);
+    border : 2 px solid transparent;
+    border-radius: 19px;
+   }
+   button:hover{
+    border : 2 px solid transparent;
+    width: 250px; 
+    color: var(--clr-t-);
+    background-color: var(--clr-wio);
+    box-shadow: 20px 20px 20px var(--clr-titre);
+   }
+  
+  .container {
+    max-width: 500px;
+    position: relative;
+    justify-items: center;
+    margin-left: 100px;
+    height: 500px;
+    overflow: hidden;
+  
+  }
+  
+  .menu {
+    position: absolute;
+    left: 0;
+    z-index: 11;
+    width: 100%;
+    bottom: 0;
+    text-align:center;
+  }
+  .menu label {
+    cursor: pointer;
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    background:var(--clr-t-);
+    border-radius: 50px;
+    /* margin: 0 0.1em 1em; */
+  }
+  .menu label:hover,.menu label:focus {
+    background:var(--clr-titre);
+  }
+  .slide-input{
+    opacity: 0;
+  }
+  .slide-img {
+    width: 500px;
+    height: 450px;
+    position: absolute;
+    top: 0;
+    left: 100%;
+    z-index: 10;
+    transition: left 0s 0.75s;
+    border-radius: 10px 10px 10px 10px
+  }
+  [id^="slide"]:checked + .slide-img {
+    left: 0;
+    z-index: 100;
+    transition: left 0.65s ease-out;
+  }
+
+  /* repsonsive */
+  @media screen and (max-width: 900px) {
+
+   .aproposdemoi {
+    display: initial;
+  }
+  #perso {
+    margin-left: 5px;
+   text-align:initial;
+  }
+  .container {
+    margin-left: 170px;
+  }
+  .menu{
+ width: 97%;
+}
+}
+
+@media screen and (max-width: 500px) {
+ 
+ .aproposdemoi{
+  margin: 15px 10px 15px 10px;
+}
+.container {
+  max-width: 390px;
+  margin-left:35px;
+  height: 350px;
+}
+  
+.slide-img {
+    width: 300px;
+    height: 350px;}
+
+.menu{
+width:30%;
+bottom: -50px;
+z-index:7;
+}
+.menu label{
+margin:0;
+}
+}

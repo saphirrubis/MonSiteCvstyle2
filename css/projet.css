@@ -1,0 +1,75 @@
+*, ::before, ::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.projets {
+    margin: 25px 25px 25px 25px;}
+
+    .mySlides1, .mySlides2 {
+        display: none}
+    .mySlides1 img, .mySlides2 img {
+        vertical-align: middle;
+        width: 500px;
+        height: 400px;
+    }
+    .info{
+        text-align: center;
+        color:green;
+
+    }
+    
+    .show-container {
+      max-width: 500px;
+      position: relative;
+      margin: auto;
+    }
+    
+ 
+    .prev, .next {
+      cursor: pointer;
+      position: absolute;
+      top: 50%;
+      width: auto;
+      padding: 16px;
+      margin-top: -22px;
+      color: white;
+      font-weight: bold;
+      font-size: 18px;
+      transition: 0.6s ease;
+      border-radius: 0 3px 3px 0;
+      user-select: none;
+    }
+    
+  
+    .next {
+      right: 0;
+      border-radius: 3px 0 0 3px;
+    }
+    
+    .prev:hover, .next:hover {
+      background-color: #070707;
+      color: white;
+    }
+ /*--------responsive----------------------------- */
+ @media screen and (max-width: 500px) {
+    
+    .mySlides1 img, .mySlides2 img {
+      width: 300px;
+      height: 250px;
+  }
+  .info{
+      color:var(--clr-qr);
+  }
+  .slideshow-container {
+    max-width:300px;
+
+  }
+  .prev, .next {
+    padding: 0;
+  }
+
+  .next {
+    right: 8.5px; 
+  }
+}
